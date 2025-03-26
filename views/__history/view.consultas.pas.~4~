@@ -1,0 +1,41 @@
+unit view.consultas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TViewConsultas = class(TForm)
+    pnlHeader: TPanel;
+    pnlLogo: TPanel;
+    imgLogo: TImage;
+    lblLogo: TLabel;
+    pnlUsuarioLogado: TPanel;
+    btnClose: TSpeedButton;
+    pnlFooter: TPanel;
+    pnlContent: TPanel;
+    lblNomeCompleto: TLabel;
+    DBGrid: TDBGrid;
+    procedure btnCloseClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewConsultas: TViewConsultas;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewConsultas.btnCloseClick(Sender: TObject);
+begin
+  Self.Close;
+end;
+
+end.

@@ -1,0 +1,53 @@
+unit view.cadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    pnlHeader: TPanel;
+    pnlLogo: TPanel;
+    imgLogo: TImage;
+    lblLogo: TLabel;
+    pnlUsuarioLogado: TPanel;
+    btnClose: TSpeedButton;
+    pnlFooter: TPanel;
+    pnlContent: TPanel;
+    lblSelecionarProfissional: TLabel;
+    Label1: TLabel;
+    lblSelecionarCliente: TLabel;
+    lblTelefone: TLabel;
+    lblEmail: TLabel;
+    lblObservacoes: TLabel;
+    cbSelecionarProfissional: TComboBox;
+    edtHora: TEdit;
+    cbSelecionarCliente: TComboBox;
+    edtTelefone: TEdit;
+    edtEmail: TEdit;
+    Edit1: TEdit;
+    pnlBtnSalvar: TPanel;
+    btnSalvar: TSpeedButton;
+    procedure btnCloseClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnCloseClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+end.

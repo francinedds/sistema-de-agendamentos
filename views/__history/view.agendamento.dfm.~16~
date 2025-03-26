@@ -1,0 +1,323 @@
+object ViewAgendamento: TViewAgendamento
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'ViewAgendamento'
+  ClientHeight = 551
+  ClientWidth = 764
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clGrayText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poMainFormCenter
+  OnShow = FormShow
+  TextHeight = 15
+  object pnlHeader: TPanel
+    AlignWithMargins = True
+    Left = 2
+    Top = 2
+    Width = 760
+    Height = 41
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 0
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 14869189
+    ParentBackground = False
+    TabOrder = 0
+    object pnlLogo: TPanel
+      Left = 0
+      Top = 0
+      Width = 193
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      TabOrder = 0
+      object imgLogo: TImage
+        AlignWithMargins = True
+        Left = 5
+        Top = 5
+        Width = 35
+        Height = 31
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Align = alLeft
+        Center = True
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000640000
+          0064080600000070E29554000000097048597300000B1300000B1301009A9C18
+          000002F54944415478DAED9DB16ED350148671940C0815157646C45A3177451D
+          58100BBC421427916064472C28439C870009B1417790608297800D8686D2D1E6
+          7433496ED2728F7DFF84EF93AC9BDA393EE79E4F3776DD56CDAE34C06834BA5D
+          55D50BDBEE6559B6573F66FB7ED9F0BED7EB3D994C26DF9BC8BFCDF5674D4CA6
+          2CCBCF36919BEBDE6713FB61933A509392BA7E7721C3E1F08D0D0F2FF8F657D3
+          E9F4B1770DDB5CBFBB903CCFE78BCB7C0D2736A17DEF1AB6B9FE26564855FFDA
+          0ACE2E733C35A9EB478858FD0811AB1F2162F5AF3CD96030B8DBE9749EDBADDD
+          A15DE0AEC524D8342175BCEBB79EFEB6E1838DCF66B3D997C5E34B42CE659884
+          8FB65D559C50DB3458FF996D8776FEAFF59D4B422CE1B10D475B30A15668B27E
+          5B25EF8AA2B85FDFB724C4EEC34F633FA6DA9A501B345CFFA99DFFAFEF7956AD
+          10D78621E472E74748E2FA1122563F42C4EA6F5D08AC07216220440C84888110
+          3110220642C440881808110321626C140269418818081103216270514F0C7759
+          6220440C848881103110220642C4408818081103216220440C848891FC574943
+          FCEB9F8AA58EF3EE0F4222E3BCFB8390C838EFFE202432CEBB3F08898CF3EE0F
+          4222E3BCFB8390C838EFFE202432CEBB3F08898CF3EE0F4222E3BCFBC3A393C4
+          20440C848881103176FEA2DE769DDE791192285F282F4212E50BE54548A27CA1
+          BC0849942F94172189F285F2222451BE505E8424CA17CA8B9044F94279119228
+          5F282F8F4E1283103110220642C4D8F98BFAB6DC4484F2222432CEBB3F08898C
+          F3EE0F4222E3BCFB8390C838EFFE202432CEBB3F08898CF3EE0F4222E3BCFB83
+          90C838EFFE202432CEBB3F3C3A490C42C4408818081103216220440C84888110
+          3110220642C4408818081163A3903CCFE75996ED5DFC9410C18909D9AFEF58B5
+          42DEDAF02075A5FF035555BD2E8AE2517DDF9290F1787CA72CCB4FF6F246EA82
+          779C9FB61DD80AF956DFB9F26700FD7EFF56B7DB7D69068FECE3EB7AEACA7709
+          EBE9DC8663EBEBD34519E7F02F8FC44088180811032162FC012B63FA923AEC25
+          080000000049454E44AE426082}
+        Stretch = True
+      end
+      object lblLogo: TLabel
+        Left = 49
+        Top = 15
+        Width = 83
+        Height = 13
+        Caption = ' Agendamento'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGrayText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object pnlUsuarioLogado: TPanel
+      Left = 554
+      Top = 0
+      Width = 206
+      Height = 41
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 1
+      object btnClose: TSpeedButton
+        Left = 182
+        Top = 0
+        Width = 23
+        Height = 22
+        Cursor = crHandPoint
+        Caption = #10006
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        OnClick = btnCloseClick
+      end
+    end
+  end
+  object pnlContent: TPanel
+    AlignWithMargins = True
+    Left = 2
+    Top = 45
+    Width = 760
+    Height = 477
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 0
+    Align = alClient
+    BevelOuter = bvNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGrayText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+    object lblProfissional: TLabel
+      Left = 391
+      Top = 280
+      Width = 68
+      Height = 13
+      Caption = 'Profissional:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGrayText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 16
+      Top = 326
+      Width = 75
+      Height = 13
+      Caption = 'Insira a hora:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGrayText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblSelecionarCliente: TLabel
+      Left = 16
+      Top = 280
+      Width = 109
+      Height = 13
+      Caption = 'Selecione o Cliente:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGrayText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblTelefone: TLabel
+      Left = 143
+      Top = 326
+      Width = 52
+      Height = 13
+      Caption = 'Telefone:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGrayText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblEmail: TLabel
+      Left = 391
+      Top = 326
+      Width = 38
+      Height = 13
+      Caption = 'E-mail:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGrayText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblObservacoes: TLabel
+      Left = 16
+      Top = 374
+      Width = 76
+      Height = 13
+      Caption = 'Observa'#231#245'es:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGrayText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Calendar: TCalendar
+      Left = 0
+      Top = -12
+      Width = 786
+      Height = 279
+      Margins.Left = 2
+      Margins.Top = 0
+      Margins.Right = 2
+      Margins.Bottom = 0
+      BorderStyle = bsNone
+      StartOfWeek = 0
+      TabOrder = 0
+    end
+    object edtHora: TEdit
+      Left = 16
+      Top = 345
+      Width = 121
+      Height = 21
+      TabOrder = 1
+    end
+    object cbSelecionarCliente: TComboBox
+      Left = 16
+      Top = 299
+      Width = 369
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGrayText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+    object edtTelefone: TEdit
+      Left = 143
+      Top = 345
+      Width = 242
+      Height = 21
+      TabOrder = 3
+    end
+    object edtEmail: TEdit
+      Left = 391
+      Top = 345
+      Width = 354
+      Height = 21
+      TabOrder = 4
+    end
+    object edtObservacao: TEdit
+      Left = 16
+      Top = 393
+      Width = 729
+      Height = 21
+      TabOrder = 5
+    end
+    object pnlBtnSalvar: TPanel
+      Left = 616
+      Top = 431
+      Width = 129
+      Height = 34
+      BevelOuter = bvNone
+      Color = 14869446
+      ParentBackground = False
+      TabOrder = 6
+      object btnSalvar: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 129
+        Height = 34
+        Cursor = crHandPoint
+        Align = alClient
+        Caption = 'Salvar'
+        Flat = True
+        OnClick = btnSalvarClick
+        ExplicitLeft = 40
+        ExplicitTop = 8
+        ExplicitWidth = 23
+        ExplicitHeight = 22
+      end
+    end
+    object edtProfissional: TEdit
+      Left = 391
+      Top = 299
+      Width = 354
+      Height = 21
+      TabOrder = 7
+    end
+  end
+  object pnlFooter: TPanel
+    AlignWithMargins = True
+    Left = 2
+    Top = 522
+    Width = 760
+    Height = 27
+    Margins.Left = 2
+    Margins.Top = 0
+    Margins.Right = 2
+    Margins.Bottom = 2
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = 14869446
+    ParentBackground = False
+    TabOrder = 2
+  end
+end

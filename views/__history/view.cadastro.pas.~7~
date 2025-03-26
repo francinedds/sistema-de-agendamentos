@@ -1,0 +1,68 @@
+unit view.cadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, service.conexao;
+
+type
+  TViewCadastro = class(TForm)
+    pnlHeader: TPanel;
+    pnlLogo: TPanel;
+    imgLogo: TImage;
+    lblLogo: TLabel;
+    pnlUsuarioLogado: TPanel;
+    btnClose: TSpeedButton;
+    pnlFooter: TPanel;
+    pnlContent: TPanel;
+    lblNomeCompleto: TLabel;
+    lblTelefone: TLabel;
+    lblEmail: TLabel;
+    edtNomeCompleto: TEdit;
+    edtTelefone: TEdit;
+    edtEmail: TEdit;
+    pnlBtnSalvar: TPanel;
+    btnSalvar: TSpeedButton;
+    lblcpf: TLabel;
+    edtCpf: TEdit;
+    procedure btnCloseClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewCadastro: TViewCadastro;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewCadastro.btnCloseClick(Sender: TObject);
+begin
+  Self.Close;
+end;
+
+procedure TViewCadastro.btnSalvarClick(Sender: TObject);
+begin // botão salvar
+  with ServiceConexao.FDQuery_Clientes do
+  begin
+    SQL.Text := 'INSERT INTO Pessoas (pes_nomecompleto, pes_cpf, ' +
+                'pes_telefone, pes_email) ' +
+                'VALUES (:pes_nomecompleto, :pes_cpf, :pes_telefone, ' +
+                ':pes_email)';
+    Params.ParamByName('pes_nomecompleto').AsString := edtNomeCompleto.Text;
+    Params.ParamByName('pes_cpf').AsString          := edtCpf.Text;
+    Params.ParamByName('pes_telefone').AsString     := edtTelefone.Text;
+    Params.ParamByName('pes_email').AsString        := edtEmail.Text;
+    ExecSQL;
+
+  end;
+    ShowMessage('Cadastro salvo com sucesso!');
+end;
+
+end.

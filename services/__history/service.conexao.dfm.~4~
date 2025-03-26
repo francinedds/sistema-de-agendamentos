@@ -1,0 +1,94 @@
+object ServiceConexao: TServiceConexao
+  Height = 628
+  Width = 167
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=C:\Users\EMANUEL\Desktop\banco\BANCOFDDS.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Connected = True
+    Left = 72
+    Top = 80
+  end
+  object FDQuery_Consultas: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'Select * from consultas')
+    Left = 72
+    Top = 192
+    object FDQuery_ConsultasCON_CODIGO: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'CON_CODIGO'
+      Origin = 'CON_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery_ConsultasCON_CLIENTE: TStringField
+      FieldName = 'CON_CLIENTE'
+      Origin = 'CON_CLIENTE'
+      Size = 200
+    end
+    object FDQuery_ConsultasCON_PROFISSIONAL: TStringField
+      FieldName = 'CON_PROFISSIONAL'
+      Origin = 'CON_PROFISSIONAL'
+      Size = 200
+    end
+    object FDQuery_ConsultasCON_DATA: TDateField
+      FieldName = 'CON_DATA'
+      Origin = 'CON_DATA'
+    end
+    object FDQuery_ConsultasCON_HORA: TTimeField
+      FieldName = 'CON_HORA'
+      Origin = 'CON_HORA'
+    end
+    object FDQuery_ConsultasCON_TELEFONE: TStringField
+      FieldName = 'CON_TELEFONE'
+      Origin = 'CON_TELEFONE'
+      Size = 50
+    end
+    object FDQuery_ConsultasCON_EMAIL: TStringField
+      FieldName = 'CON_EMAIL'
+      Origin = 'CON_EMAIL'
+      Size = 200
+    end
+    object FDQuery_ConsultasCON_OBSERVACAO: TStringField
+      FieldName = 'CON_OBSERVACAO'
+      Origin = 'CON_OBSERVACAO'
+      Size = 200
+    end
+  end
+  object FDQuery_Clientes: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'select * from Pessoas')
+    Left = 72
+    Top = 272
+    object FDQuery_ClientesPES_CODIGO: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'PES_CODIGO'
+      Origin = 'PES_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery_ClientesPES_NOMECOMPLETO: TStringField
+      FieldName = 'PES_NOMECOMPLETO'
+      Origin = 'PES_NOMECOMPLETO'
+      Size = 200
+    end
+    object FDQuery_ClientesPES_CPF: TStringField
+      FieldName = 'PES_CPF'
+      Origin = 'PES_CPF'
+    end
+    object FDQuery_ClientesPES_TELEFONE: TStringField
+      FieldName = 'PES_TELEFONE'
+      Origin = 'PES_TELEFONE'
+      Size = 50
+    end
+    object FDQuery_ClientesPES_EMAIL: TStringField
+      FieldName = 'PES_EMAIL'
+      Origin = 'PES_EMAIL'
+      Size = 200
+    end
+  end
+end

@@ -1,0 +1,28 @@
+object ServiceConexao: TServiceConexao
+  Height = 628
+  Width = 167
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=C:\Users\EMANUEL\Desktop\banco\BANCOFDDS.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Connected = True
+    Left = 72
+    Top = 80
+  end
+  object FDQuery_Consultas: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'Select * from consultas')
+    Left = 72
+    Top = 264
+  end
+  object FDQuery_Clientes: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'select * from Pessoas')
+    Left = 72
+    Top = 176
+  end
+end
